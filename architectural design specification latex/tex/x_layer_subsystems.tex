@@ -13,13 +13,13 @@ This sub system just deals with the input validation. This subsystem is created 
 Following assumptions are made for this SubSystem:
 \begin{itemize}
     \item Inventory app is already installed on users cellphone.
-    \item User provides some kind of input the form.
+    \item User clicked on the SignUp or Login button after filling all the required information in the home screen.
 \end{itemize}
 
 \subsubsection{Responsibilities}
 Following are the responsibilities of this SubSystem:
 \begin{itemize}
-    \item This subsection must check if the input given by user is some type of SQL query.
+    \item This subsection must check if the input given by user is some type of SQL query. If input is identified as query, it must be discarded else accepted.
 \end{itemize}
 
 \subsubsection{Subsystem Interfaces}
@@ -49,6 +49,7 @@ This sub section just deals with the validation of username and password. This s
 \subsubsection{Assumptions}
 Following are the assumption of SubSection Email/Password Validation:
 \begin{itemize}
+    \item User clicked in the login or signup in the home screen.
     \item Users cellphone is connected to the internet.
     \item User has a valid Email address.
     \item User provides the password that satisfies the basic password constrain. 
@@ -86,7 +87,10 @@ This is the subsystem that deals with the database part of the Application. It i
 \end{figure}
 
 \subsubsection{Assumptions}
-Following assumptions are made about this 
+Following assumptions are made about this SubSystem:
+\begin{itemize}
+    \item 
+\end{itemize}
 
 \subsubsection{Responsibilities}
 Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
