@@ -1,7 +1,7 @@
-This is the first sub section that user interacts with. When the user opens the mobile application for the first time details for sign up is displayed. Then the user enters all the information required for sign up including all the valid username and password to create a account. Then an account for the user is created.
+This is the first sub section that user interacts with. When the user opens the mobile application for the first time details for SignUp is displayed. Then the user enters all the information required for SignUp including all the valid username and password to create a account. Then an account for the user is created.
 
 \subsection{Input Validation}
-This sub system just deals with the input validation. This subsystem is created to prevent form SQL injection. Input validation takes the input of the user and checks if the input is database is SQL query and discards if input is query or malicious code.
+This sub system just deals with the input validation. This subsystem is created to prevent form SQL injection. Input validation takes the input of the user and checks if the input is SQL query and discards if input is query or malicious input.
 
 \begin{figure}[h!]
 	\centering
@@ -10,10 +10,17 @@ This sub system just deals with the input validation. This subsystem is created 
 \end{figure}
 
 \subsubsection{Assumptions}
-Any assumptions made in the definition of the subsystem should be listed and described. Pay particular attention to assumptions concerning interfaces and interactions with other layers.
+Following assumptions are made for this SubSystem:
+\begin{itemize}
+    \item Inventory app is already installed on users cellphone.
+    \item User provides some kind of input the form.
+\end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+Following are the responsibilities of this SubSystem:
+\begin{itemize}
+    \item This subsection must check if the input given by user is some type of SQL query.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -40,10 +47,18 @@ This sub section just deals with the validation of username and password. This s
 \end{figure}
 
 \subsubsection{Assumptions}
-Any assumptions made in the definition of the subsystem should be listed and described. Pay particular attention to assumptions concerning interfaces and interactions with other layers.
-
+Following are the assumption of SubSection Email/Password Validation:
+\begin{itemize}
+    \item Users cellphone is connected to the internet.
+    \item User has a valid Email address.
+    \item User provides the password that satisfies the basic password constrain. 
+\end{itemize}
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+Following responsibilities must be carried out by this SubSystem:
+\begin{itemize}
+    \item Email address must be validated. If Email address doesn't exist or is not valid, SubSystem must prevent form creating account.
+    \item If the password doesn't meet minimum criteria, SubSystem must prevent user form creating account.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -62,7 +77,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 
 
 \subsection{DB Controller}
-This is the subsystem that deals with the database part of the Application. 
+This is the subsystem that deals with the database part of the Application. It is responsible for taking all the user input provided in the SignUp form and store it in the database accordingly.
 
 \begin{figure}[h!]
 	\centering
@@ -71,7 +86,7 @@ This is the subsystem that deals with the database part of the Application.
 \end{figure}
 
 \subsubsection{Assumptions}
-Any assumptions made in the definition of the subsystem should be listed and described. Pay particular attention to assumptions concerning interfaces and interactions with other layers.
+Following assumptions are made about this 
 
 \subsubsection{Responsibilities}
 Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
