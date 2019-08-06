@@ -4,8 +4,8 @@ This is a type of main controller of the Database system. All the data that need
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/dbcontroller}
+ \caption{DB Controller description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -37,13 +37,13 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{center}
 \end{table}
 
-\subsection{Login Mgmt}
+\subsection{Login Mgt}
 This subsection of database just deals with the login information. User first registers for the account in the mobile application. Then when he wants to use the app he will provide the user name and password for the app. Then the login management layer handles all the data. It checks if the user name and password provided by the user exists in database or not. It should allow user to login if the combination of user name and password exists else it should deny user from using the application itself.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/loginmgt}
+ \caption{Login mgt description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -74,13 +74,13 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{center}
 \end{table}
 
-\subsection{Register Mgmt}
+\subsection{Register Mgt}
 This subsection of the database deals with registration data like first name, last name, DOB,etc. When user provides the information it is validated for SQL injection and passed into the register management. Then the data is stored in database in organized manner by the register management subsystem.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/regmgt}
+ \caption{Register mgt description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -112,12 +112,12 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{center}
 \end{table}
 
-\subsection{Self Management}
+\subsection{Shelf mgt}
 This subsystem of database is used whenever user wants to add or remove self. When user provides the specification for the self then the database controller takes the data and passes it to the self management layer. Then the layer takes the information and makes the necessary adjustment in the database.
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/shelfmgt}
+ \caption{Shelf mgt description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -148,13 +148,13 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{center}
 \end{table}
 
-\subsection{Item Mgmt}
+\subsection{Item mgt}
 This subsystem of the database is used whenever user wants to add or remove item from the database. When user provides the data for adding or removing the item, then the DB controller takes the input at first and then passes it to the item Mgmt. Then the layer takes the input value and make necessary change ie. add or remove the item accordingly.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/itemmgt}
+ \caption{Item mgt description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -185,13 +185,13 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{center}
 \end{table}
 
-\subsection{Search Mgmt}
+\subsection{Search mgt}
 This Sub System deals with taking the item description from user and it searches for the item. Variety of options are provided for searching the item. User can use the camera in the cellphone to scan the QR generated for the specific item or users will also be able to search the item by their names.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
- \caption{Example subsystem description diagram}
+ 	\includegraphics[width=0.60\textwidth]{images/searchmgt}
+ \caption{Search mgt description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
