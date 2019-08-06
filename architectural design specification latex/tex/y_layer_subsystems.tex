@@ -7,7 +7,7 @@ Any kind of data coming and going to Business Logic do so through the Business c
 \begin{figure}[h!]
 	\centering
  	\includegraphics[width=0.60\textwidth]{images/businesscontroller}
- \caption{Example subsystem description diagram}
+ \caption{Business Controller Subsystem Interfaces}
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -30,18 +30,27 @@ Following are the responsibilities of the Business Logic:
 \end{itemize}
 
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Business Controller Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. 
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#1 & Business Controller & \pbox{3cm}{Login data \\ Registration data\\add item data\\ add shelf data\\search data} & \pbox{3cm}{\\}  \\ \hline
-    \#2 & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+     \#11 & UI\_Controller/Business\_Controller & \pbox{3cm}{User input \\ label} & \pbox{3cm}{N/A}  \\ \hline
+    \#12 & Business\_Controller/UI\_Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message \\ Item image}  \\ \hline
+    \#13 & Business Controller/AR Generator & \pbox{3cm}{Item from database} & \pbox{3cm}{\\}  \\ \hline
+    \#14 & AR Generator/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Item Image}  \\ \hline
+    \#15 & Business Controller/QR Generator & \pbox{3cm}{Item Description form UI\_Controller} & \pbox{3cm}{N/A}  \\ \hline
+    \#16 & QR Generator/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Item description \\ QR code}  \\ \hline
+    \#17 & Business Controller/UI Validation & \pbox{3cm}{Any input from UI\_Controller} & \pbox{3cm}{N/A}  \\ \hline
+    \#18 & UI Validation/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Valid or Invalid }  \\ \hline
+    \#19 & Business Controller/DB\_Controller & \pbox{3cm}{Any input from UI\_Controller if valid} & \pbox{3cm}{N/A}  \\ \hline
+    \#20 & DB\_Controller/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Item\\ Success or failure Message}  \\ \hline
     \end{tabular}
+    \caption {Business Controller Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -64,18 +73,19 @@ AR generator is the part of Business logic that generates AR when a customer wan
 \subsubsection{Responsibilities}
 AR generator produces the AR and when a customer scans a bar-code for the item he is searching, the program will display the AR on the Bar-code.
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{AR Generator Subsystem Interfaces}
 
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#13 & Description\pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#14 & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#13 & Business Controller/AR Generator & \pbox{3cm}{Item from database} & \pbox{3cm}{N/A}  \\ \hline
+    \#14 & AR Generator/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Item Image}  \\ \hline
     \end{tabular}
+    \caption {AR Generator Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -98,17 +108,18 @@ Based on description of the item customer provides, QR generator generate QR.Thi
 \subsubsection{Responsibilities}
 QR generator is responsible of generating new QR for each new item that is being added to the inventory. This shall help in giving new identity to the item that is to be stored as well as make it easy to access the item stored in the inventory.
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{QR Generator Subsystem Interfaces}
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#15 & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#16 & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#15 & Business Controller/QR Generator & \pbox{3cm}{Item Description form UI\_Controller} & \pbox{3cm}{N/A}  \\ \hline
+    \#16 & QR Generator/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Item description \\ QR code}  \\ \hline
     \end{tabular}
+    \caption {QR Generator Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -135,17 +146,18 @@ This section will validate format and types of input from user. It will reject t
 \end{itemize}
 
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{UI Input Validation Subsystem Interfaces}
  Inputs and outputs for the UI validation are defined here. 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#17 & Business Controller / UI validation & \pbox{3cm}{item information } & \pbox{3cm}{N/A}  \\ \hline
-    \#18 & UI validation & \pbox{3cm}{N/A} & \pbox{3cm}{Success}  \\ \hline
+    \#17 & Business Controller/UI Validation & \pbox{3cm}{Any input from UI\_Controller} & \pbox{3cm}{N/A}  \\ \hline
+    \#18 & UI Validation/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Valid or Invalid }  \\ \hline
     \end{tabular}
+    \caption {UI Input Validation Subsystem Interfaces} 
 \end{center}
 \end{table}
 
