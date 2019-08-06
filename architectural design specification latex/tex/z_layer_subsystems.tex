@@ -1,18 +1,24 @@
-This layer is active when the user is logged in to the app and wants to add item. Once on the Add Item layer user is presented with option of entering the item description. The main task of this layer is to take product, find the suitable space for the product, generate the QR and save it in the database for future retrieval purpose.
+
+This layer is active when the user is logged in to the app and wants to search for the item in the inventory. Search layer is presented with option of entering item description manually or entering the description using QR reader.This layer helps to find the shelf where the item is stored and to see if the inventory has more of the item searched.
 \subsection{Item Description}
-This SubSystem deals with taking the item description from user. Variety of options are provided for inputting the item. User can use the camera in the cellphone to 
+This SubSystem deals with the searching the item the inventory has. It will take the input through text input or barcode reader or even the camera.
 
 \begin{figure}[h!]
 	\centering
- 	\includegraphics[width=0.60\textwidth]{images/subsystem}
+ 	\includegraphics[width=0.60\textwidth]{images/Capture}
  \caption{Example subsystem description diagram}
 \end{figure}
 
 \subsubsection{Assumptions}
-Any assumptions made in the definition of the subsystem should be listed and described. Pay particular attention to assumptions concerning interfaces and interactions with other layers.
+Here are some assumptions that are made:
+\begin{itemize}
+    \item The user is logged into the system. 
+    \item 
+    \item
+\end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
