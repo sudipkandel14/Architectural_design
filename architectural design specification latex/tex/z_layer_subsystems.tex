@@ -31,20 +31,20 @@ These are the following responsibilities of the Database Controller.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#22 & DB controller/Login\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
-    \#21 & Login\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#22 & DB controller/Login\_mgt & \pbox{3cm}{N/A } & \pbox{3cm}{Username\\ Password}  \\ \hline
+    \#21 & Login\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     
-    \#24 & DB Controllere/Reg\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
-    \#23 & Reg\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#24 & DB Controllere/Reg\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Username\\ Password\\email address\\User Name}  \\ \hline
+    \#23 & Reg\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message1} & \pbox{3cm}{N/A}  \\ \hline
     
-    \#35 & DB Controller/Shelf\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
-    \#25 & Shel\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#35 & DB Controller/Shelf\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Shelf Name\\Row\\column\\Shelf Location}  \\ \hline
+    \#25 & Shelf\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     
-     \#26 & DB Controller/Item\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
-    \#27 & Item\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+     \#26 & DB Controller/Item\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)}  \\ \hline
+     \#27 & DB Controller/Item\_mgt & \pbox{3cm}{Image file} & \pbox{3cm}{N/A}  \\ \hline
     
-     \#28 & DB Controller/Search\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
-    \#29 & Search\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+     \#28 & DB Controller/Search\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{User input \\ label}  \\ \hline
+    \#29 & Search\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message \\ Item image} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -80,8 +80,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#22 & DB controller/Login\_mgt & \pbox{3cm}{N/A } & \pbox{3cm}{Username\\ Password}  \\ \hline
+    \#21 & Login\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -118,8 +118,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#24 & DB Controllere/Reg\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Username\\ Password\\email address\\User Name}  \\ \hline
+    \#23 & Reg\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message1} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -154,8 +154,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+      \#35 & DB Controller/Shelf\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Shelf Name\\Row\\column\\Shelf Location}  \\ \hline
+    \#25 & Shelf\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -191,8 +191,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#26 & DB Controller/Item\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)}  \\ \hline
+     \#27 & DB Controller/Item\_mgt & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -229,8 +229,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#28 & DB Controller/Search\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{User input \\ label}  \\ \hline
+    \#29 & Search\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message \\ Item image} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
