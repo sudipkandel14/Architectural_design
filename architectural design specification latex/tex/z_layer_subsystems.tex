@@ -197,11 +197,16 @@ This Sub System deals with taking the item description from user and it searches
 \subsubsection{Assumptions}
 These are the following assumptions made about this subsection:
 \begin{itemize}
-    \item 
+    \item Input provided by user is already verified to be the valid input. Eg, malicious code or SQL query is already discarded.
+    \item All the necessary information is provided for the search. 
+    \item Device has working camera to scan and search. 
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+These are the following responsibilities of this sub system:
+\begin{itemize}
+    \item Must be able to take the input and return the result if it exists in database and return "No Items Found" if nothing is found in the database.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
