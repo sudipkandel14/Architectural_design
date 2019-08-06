@@ -110,8 +110,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Register & \pbox{3cm}{user} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Register & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#3 & Register & \pbox{3cm}{user} & \pbox{3cm}{user information}  \\ \hline
+    \#4 & Register & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the controller}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -123,7 +123,9 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \begin{figure}[h!]
 	\centering
  	\includegraphics[width=0.60\textwidth]{images/addshelf}
+
  \caption{Adding Shelf description diagram}
+
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -150,8 +152,8 @@ Each of the inputs and outputs for the Add shelf subsystem are defined here.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Add shelf & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Add shelf & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#5 & Add shelf & \pbox{3cm}{user} & \pbox{3cm}{Shelf information}  \\ \hline
+    \#6 & Add shelf & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the UI controller}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -163,7 +165,9 @@ Add Item allows the user to add the items with the description of its different 
 \begin{figure}[h!]
 	\centering
  	\includegraphics[width=0.60\textwidth]{images/additem}
+
  \caption{Adding items description diagram}
+
 \end{figure}
 
 \subsubsection{Assumptions}
@@ -177,7 +181,7 @@ Following assumptions are made about this SubSystem:
 \subsubsection{Responsibilities}
 These are the following responsibilities of this subsystem:
 \begin{itemize}
-    \item 
+    \item The system must get the detailed information from the user and send it to the UI Controller.
 \end{itemize}
 
 \subsubsection{Subsystem Interfaces}
@@ -189,8 +193,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Add Item & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Add Item & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#7 & Add Item & \pbox{3cm}{user} & \pbox{3cm}{Item Information}  \\ \hline
+    \#8 & Add Item & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the controller}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -227,8 +231,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Search & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Search & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#9 & Search & \pbox{3cm}{user} & \pbox{3cm}{barcode // text}  \\ \hline
+    \#10 & Search & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the UI Controller}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
