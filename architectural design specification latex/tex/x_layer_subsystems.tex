@@ -98,7 +98,7 @@ Following responsibilities must be carried out by this SubSystem:
 \begin{itemize}
     \item Email address, user name and the password is validated. If the provided email address is not valid then user is not allowed to register for the account.
     \item The system must only accept a unique username and a unique email address.
-    \item User password must satisfy minimum criteria for the assword constrain.
+    \item User password must satisfy minimum criteria for the password constrain.
 \end{itemize}
 
 \subsubsection{Subsystem Interfaces}
@@ -231,8 +231,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#9 & Search page & \pbox{3cm}{barcode or text} & \pbox{3cm}{item information}  \\ \hline
-    \#10 & Search page & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the UI Controller}  \\ \hline
+    \#9 & Search/ UI Controller & \pbox{3cm}{barcode or text} & \pbox{3cm}{N/A}  \\ \hline
+    \#10 & UI Controller/ Search page & \pbox{3cm}{N/A} & \pbox{3cm}{Item Information}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
