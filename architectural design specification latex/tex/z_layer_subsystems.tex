@@ -23,7 +23,7 @@ These are the following responsibilities of the Database Controller.
 \end{itemize}
 
 \subsubsection{Subsystem Interfaces}
-Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+
 
 \begin {table}[H]
 \caption {Subsystem interfaces} 
@@ -31,8 +31,20 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#22 & DB controller/Login\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
+    \#21 & Login\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    
+    \#24 & DB Controllere/Reg\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
+    \#23 & Reg\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    
+    \#35 & DB Controller/Shelf\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
+    \#25 & Shel\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    
+     \#26 & DB Controller/Item\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
+    \#27 & Item\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    
+     \#28 & DB Controller/Search\_mgt & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{N/A}  \\ \hline
+    \#29 & Search\_mgt/DB Controller & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
