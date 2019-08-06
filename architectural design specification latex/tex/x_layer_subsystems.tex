@@ -82,8 +82,9 @@ Each of the inputs and outputs for the subsystem are defined here. An entry for 
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#1 & Actor/ Login & \pbox{3cm}{Username \\Password} & \pbox{3cm}{Successful message \\ Failure Message}  \\ \hline
-    \#2 & Login & \pbox{3cm}{N/A} & \pbox{3cm}{msg from UI Controller}  \\ \hline
+    \#30 & Actor/ Login & \pbox{3cm}{Username \\Password} & \pbox{3cm}{Success message \\ Failure Message}  \\ \hline
+    \#1 & Login/UI\_Controller & \pbox{3cm}{Userid \\ Password} & \pbox{3cm}{N/A}  \\ \hline
+    \#2 & UI\_Controller/Login & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -122,8 +123,9 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#3 & User Register Page & \pbox{3cm}{Username,Password,Email,DOB} & \pbox{3cm}{user information}  \\ \hline
-    \#4 & User Register Page & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the controller}  \\ \hline
+    \#31 & Actor/Register & \pbox{3cm}{Username\\Password\\Email} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#3 & Register/UI\_Controller & \pbox{3cm}{Userid \\ Password\\User Name \\ Email} & \pbox{3cm}{N/A}  \\ \hline
+    \#4 & UI\_Controller/Register & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -164,8 +166,9 @@ Each of the inputs and outputs for the Add shelf subsystem are defined here.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#5 & Add shelf page & \pbox{3cm}{Shelf dimensions} & \pbox{3cm}{Shelf information}  \\ \hline
-    \#6 & Add shelf page & \pbox{3cm}{N/A} & \pbox{3cm}{msg from the UI controller}  \\ \hline
+    \#32 & Actor/Add shelf & \pbox{3cm}{Shelf Name \\ #Row\\ #Column \\ Shelf Location} & \pbox{3cm}{Success Message \\ Failure Message} \\ \hline
+   \#5 & Add Shelf/UI\_Controller & \pbox{3cm}{Shelf Name \\ #Row\\ #Column \\ Shelf Location} & \pbox{3cm}{N/A}  \\ \hline
+    \#6 & UI\_Controller/Add Shelf & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -205,8 +208,9 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#7 & Add Item/ UI Controller & \pbox{3cm}{name,Expiration \\ brand,\\ Quantity,Price} & \pbox{3cm}{N/A}  \\ \hline
-    \#8 & Add Item page & \pbox{3cm}{N/A} & \pbox{3cm}{Item add successfull \\ Item add fail}  \\ \hline
+    \#33 & Actor/ Add Item & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#7 & Add Item/UI\_Controller & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)} & \pbox{3cm}{N/A}  \\ \hline
+    \#8 & UI\_Controller/Add Item & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -243,8 +247,9 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#9 & Search/ UI Controller & \pbox{3cm}{barcode or text} & \pbox{3cm}{N/A}  \\ \hline
-    \#10 & UI Controller/ Search page & \pbox{3cm}{N/A} & \pbox{3cm}{Item Information}  \\ \hline
+    \#34 & Actor/Search & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}Image file}  \\ \hline
+   \#9 & Search/UI\_Controller & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}{N/A}  \\ \hline
+    \#10 & UI\_Controller/Search & \pbox{3cm}{N/A} & \pbox{3cm}{Image file}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
