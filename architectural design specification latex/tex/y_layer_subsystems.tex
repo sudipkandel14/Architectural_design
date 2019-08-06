@@ -11,14 +11,24 @@ Any kind of data coming and going to Business Logic do so through the Business c
 \end{figure}
 
 \subsubsection{Assumptions}
+
 \begin{itemize}
-    \item User logged in.
+    
     \item UI is working fine and UI controller has well established connection with the Business Logic.
     \item Database is working fine and DB controller has well established connection with the Business Logic.
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+Following are the responsibilities of the Business Logic:
+\begin{itemize}
+    \item Creating QR for any new item to be stored in the inventory.
+    \item Creating AR for any new item to be stored in the inventory.
+    \item Validate the input coming from the UI.
+    \item Send QR generated to be stored in Database.
+    \item Send AR generated  to be stored in the Database.
+    \item Fetch required data from Database that are required by the UI.
+\end{itemize}
+
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
