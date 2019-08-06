@@ -39,8 +39,20 @@ Each of the inputs and outputs for the subsystem are defined here.
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#1 & Business Controller & \pbox{3cm}{Login data \\ Registration data\\add item data\\ add shelf data\\search data} & \pbox{3cm}{\\}  \\ \hline
-    \#2 & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#12 & Business Controller/UI Controller & \pbox{3cm}{Login, Registration, Add item, add Shelf, search data} & \pbox{3cm}{N/A}  \\ \hline
+    \#11 & UI Controller/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{AR, QR, success/failure Message}  \\ \hline
+   
+    \#13 & Business Controller/AR Generator & \pbox{3cm}{item description} & \pbox{3cm}{}  \\ \hline
+    \#14 & AR GeneratorBusiness/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{AR image}  \\ \hline
+    
+    \#15 & Business Controller/QR Generator & \pbox{3cm}{Item description} & \pbox{3cm}{N/A}  \\ \hline
+    \#16 & QR Generator /Business Controller& \pbox{3cm}{N/A} & \pbox{3cm}{QR Code}  \\ \hline
+    
+    \#17 & Business Controller/UI validation & \pbox{3cm}{User Input} & \pbox{3cm}{N/A}  \\ \hline
+    \#18 & UI validation / Business Controller& \pbox{3cm}{N/A} & \pbox{3cm}{Success/Failure Message}  \\ \hline
+    \#19 & Business Controller/DB controller & \pbox{3cm}{User Input,QR, QR} & \pbox{3cm}{N/A}  \\ \hline
+    \#20 & DB controller/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Success/Failure Message}  \\ \hline
+    
     \end{tabular}
 \end{center}
 \end{table}
@@ -73,8 +85,8 @@ AR generator produces the AR and when a customer scans a bar-code for the item h
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#13 & Business Controller/AR Generator & \pbox{3cm}{item description} & \pbox{3cm}{N/A}  \\ \hline
+    \#14 & AR GeneratorBusiness/Business Controller & \pbox{3cm}{N/A} & \pbox{3cm}{AR image}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -106,8 +118,8 @@ QR generator is responsible of generating new QR for each new item that is being
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#15 & Business Controller/QR Generator & \pbox{3cm}{Item description} & \pbox{3cm}{N/A}  \\ \hline
+    \#16 & QR Generator /Business Controller& \pbox{3cm}{N/A} & \pbox{3cm}{QR Code}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
@@ -139,8 +151,8 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#17 & Business Controller/UI validation & \pbox{3cm}{User Input} & \pbox{3cm}{N/A}  \\ \hline
+    \#18 & UI validation / Business Controller& \pbox{3cm}{N/A} & \pbox{3cm}{Success/Failure Message}  \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
