@@ -1,4 +1,4 @@
-This subsection is used when we have to save or retrive data from the database. When user tries to login, register, add self, add item or search we have to use database. When somebody wants to register for the app, he provides all the infomration then these information is taken by the DB controller and saved in organized manner. same process occurs for all the other activities like adding self, adding item or login.
+This subsection is used when we have to save or retrieve data from the database. When user tries to login, register, add self, add item or search we have to use database. When somebody wants to register for the app, he provides all the information then these information is taken by the DB controller and saved in organized manner. same process occurs for all the other activities like adding self, adding item or login.
 \subsection{DB Controller}
 This is a type of main controller of the Database system. All the data that needs to be stored in database is first handled by this layer and later stored in the database. When any of the other layer send data to the database layer, first database layer takes the information and figures out what type of data is provided and what to do with the given data.
 
@@ -22,11 +22,11 @@ These are the following responsibilities of the Database Controller.
     \item When input is captured it must be able to classify if the data is login data or sign up data. Must be able to classify if the incoming data is trying to search the item or save the item in the database.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{DB Controller Subsystem Interfaces}
 
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+ 
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -46,6 +46,7 @@ These are the following responsibilities of the Database Controller.
      \#28 & DB Controller/Search\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{User input \\ label}  \\ \hline
     \#29 & Search\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message \\ Item image} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {DB Controller Subsystem Interfaces}
 \end{center}
 \end{table}
 
@@ -71,11 +72,11 @@ These are the following responsibilities of this layer;
     \item If provided login data exists in database let user log in to the app else reject from logging in.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Login Mgt Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -83,6 +84,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#22 & DB controller/Login\_mgt & \pbox{3cm}{N/A } & \pbox{3cm}{Username\\ Password}  \\ \hline
     \#21 & Login\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {Login Mgt Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -109,11 +111,11 @@ These are the following responsibilities of this subsection.
     \item Must be able to store all the information in the database in easy retrieval fashion.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Register Mgt Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -121,6 +123,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#24 & DB Controllere/Reg\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Username\\ Password\\email address\\User Name}  \\ \hline
     \#23 & Reg\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message1} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {Register Mgt Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -145,11 +148,11 @@ These are the following responsibility's that must be performed by this sub syst
     \item Must be able to take all the input values and allocate or de-allocate the self space according to the input values.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Shelf mgt Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -157,6 +160,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
       \#35 & DB Controller/Shelf\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Shelf Name\\Row\\column\\Shelf Location}  \\ \hline
     \#25 & Shelf\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {Shelf mgt Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -182,11 +186,11 @@ These are the following responsibilities of this subsystem.
     \item Must be able to take all the input values and add or remove item according to the input provided by the user.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Item mgt Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -194,6 +198,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#26 & DB Controller/Item\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)}  \\ \hline
      \#27 & DB Controller/Item\_mgt & \pbox{3cm}{Success Message \\ Failure Message} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {Item mgt Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -220,11 +225,11 @@ These are the following responsibilities of this sub system:
     \item Must be able to take the input and return the result if it exists in database and return "No Items Found" if nothing is found in the database.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Search mgt Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -232,5 +237,6 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#28 & DB Controller/Search\_mgt & \pbox{3cm}{N/A} & \pbox{3cm}{User input \\ label}  \\ \hline
     \#29 & Search\_mgt/DB Controller & \pbox{3cm}{Success Message \\ Failure Message \\ Item image} & \pbox{3cm}{N/A}  \\ \hline
     \end{tabular}
+    \caption {Search mgt Subsystem Interfaces} 
 \end{center}
 \end{table}

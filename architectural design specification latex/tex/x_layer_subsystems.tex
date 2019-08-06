@@ -22,7 +22,7 @@ Following are the responsibilities of this SubSystem:
     \item To receive Messages and various images returned by Business\_Controller 
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{UI\_Controller Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here.
 
 \begin {table}[H]
@@ -44,7 +44,7 @@ Each of the inputs and outputs for the subsystem are defined here.
     \#11 & UI\_Controller/Business\_Controller & \pbox{3cm}{User input \\ label} & \pbox{3cm}{N/A}  \\ \hline
     \#12 & Business\_Contorller/UI\_Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message \\ Item image}  \\ \hline
     \end{tabular}
-    \caption {Subsystem interfaces}
+    \caption {UI\_Controller Subsystem Interfaces}
 \end{center}
 \end{table}
 
@@ -73,11 +73,11 @@ These are the following responsibilities of this subsystem:
     \item If the password doesn’t meet minimum criteria, SubSystem must prevent user form creating account.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Login Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. An entry for each labelled interface that connects to this subsystem is shown in the table below:
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -86,6 +86,7 @@ Each of the inputs and outputs for the subsystem are defined here. An entry for 
     \#1 & Login/UI\_Controller & \pbox{3cm}{Userid \\ Password} & \pbox{3cm}{N/A}  \\ \hline
     \#2 & UI\_Controller/Login & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
+    \caption {Login Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -114,11 +115,11 @@ Following responsibilities must be carried out by this SubSystem:
     \item User password must satisfy minimum criteria for the password constrain.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Register Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -127,6 +128,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#3 & Register/UI\_Controller & \pbox{3cm}{Userid \\ Password\\User Name \\ Email} & \pbox{3cm}{N/A}  \\ \hline
     \#4 & UI\_Controller/Register & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
+    \caption {Register Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -157,11 +159,11 @@ These are the following responsibilities of this subsystem:
     \item The system validate the measurement.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Add Shelf Subsystem Interfaces}
 Each of the inputs and outputs for the Add shelf subsystem are defined here.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -170,6 +172,7 @@ Each of the inputs and outputs for the Add shelf subsystem are defined here.
    \#5 & Add Shelf/UI\_Controller & \pbox{3cm}{Shelf Name \\ #Row\\ #Column \\ Shelf Location} & \pbox{3cm}{N/A}  \\ \hline
     \#6 & UI\_Controller/Add Shelf & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
+    \caption {Add Shelf Subsystem Interfaces} 
 \end{center}
 \end{table}
 
@@ -199,11 +202,11 @@ These are the following responsibilities of this subsystem:
     \item The system must get the detailed information from the user and send it to the UI Controller.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Add Item Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
@@ -212,6 +215,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
     \#7 & Add Item/UI\_Controller & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)} & \pbox{3cm}{N/A}  \\ \hline
     \#8 & UI\_Controller/Add Item & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
     \end{tabular}
+    \caption {Add Item Subsystem Interfacess} 
 \end{center}
 \end{table}
 
@@ -238,19 +242,20 @@ These are the following responsibilities of this subsystem:
     \item The system should be able to get the data from user and send it to the UI Controller.
 \end{itemize}
 
-\subsubsection{Subsystem Interfaces}
+\subsubsection{Search Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#34 & Actor/Search & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}Image file}  \\ \hline
+    \#34 & Actor/Search & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}{Image file}  \\ \hline
    \#9 & Search/UI\_Controller & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}{N/A}  \\ \hline
     \#10 & UI\_Controller/Search & \pbox{3cm}{N/A} & \pbox{3cm}{Image file}  \\ \hline
     \end{tabular}
+    \caption {Search Subsystem Interfaces} 
 \end{center}
 \end{table}
 
