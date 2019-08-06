@@ -38,7 +38,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{Login Mgmt}
-
+This subsection of database just deals with the login information. User first registers for the account in the mobile application. Then when he wants to use the app he will provide the user name and password for the app. Then the login management layer handles all the data. It checks if the user name and password provided by the user exists in database or not. It should allow user to login if the combination of user name and password exists else it should deny user from using the application itself.
 
 \begin{figure}[h!]
 	\centering
@@ -49,11 +49,15 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \subsubsection{Assumptions}
 These are the following assumptions made about this subsection:
 \begin{itemize}
-    \item 
+    \item Input provided by the user is valid input. Inputs are not malicious code or SQL query.
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+These are the following responsibilities of this layer;
+\begin{itemize}
+    \item Check the provided login against the database login information.
+    \item If provided login data exists in database let user log in to the app else reject from logging in.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -71,7 +75,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{Register Mgmt}
-This SubSystem deals with taking the item description from user. Variety of options are provided for inputting the item. User can use the camera in the cellphone to 
+This subsection of the database deals with registration data like first name, last name, DOB,etc. When user provides the information it is validated for SQL injection and passed into the register management. Then the data is stored in database in organized manner by the register management subsystem.
 
 \begin{figure}[h!]
 	\centering
@@ -82,11 +86,16 @@ This SubSystem deals with taking the item description from user. Variety of opti
 \subsubsection{Assumptions}
 These are the following assumptions made about this subsection:
 \begin{itemize}
-    \item 
+    \item User provides all the information needed to register the application. 
+    \item Input provided by user is already verified to be the valid input. Eg, malicious code or SQL query is already discarded.
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+These are the following responsibilities of this subsection.
+\begin{itemize}
+    \item Must be able to return error if all of input field is not provided.
+    \item Must be able to store all the information in the database in easy retrieval fashion.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -104,8 +113,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{Self Management}
-This SubSystem deals with taking the item description from user. Variety of options are provided for inputting the item. User can use the camera in the cellphone to 
-
+This subsystem of database is used whenever user wants to add or remove self. When user provides the specification for the self then the database controller takes the data and passes it to the self management layer. Then the layer takes the information and makes the necessary adjustment in the database.
 \begin{figure}[h!]
 	\centering
  	\includegraphics[width=0.60\textwidth]{images/subsystem}
@@ -115,11 +123,15 @@ This SubSystem deals with taking the item description from user. Variety of opti
 \subsubsection{Assumptions}
 These are the following assumptions made about this subsection:
 \begin{itemize}
-    \item 
+    \item Input provided by user is already verified to be the valid input. Eg, malicious code or SQL query's already discarded.
+    \item All the necessary input for adding or deleting the self is provided.
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+These are the following responsibility's that must be performed by this sub system:
+\begin{itemize}
+    \item Must be able to take all the input values and allocate or de-allocate the self space according to the input values.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -137,7 +149,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{Item Mgmt}
-This SubSystem deals with taking the item description from user. Variety of options are provided for inputting the item. User can use the camera in the cellphone to 
+This subsystem of the database is used whenever user wants to add or remove item from the database. When user provides the data for adding or removing the item, then the DB controller takes the input at first and then passes it to the item Mgmt. Then the layer takes the input value and make necessary change ie. add or remove the item accordingly.
 
 \begin{figure}[h!]
 	\centering
@@ -148,11 +160,15 @@ This SubSystem deals with taking the item description from user. Variety of opti
 \subsubsection{Assumptions}
 These are the following assumptions made about this subsection:
 \begin{itemize}
-    \item 
+    \item Input provided by user is already verified to be the valid input. Eg, malicious code or SQL query is already discarded.
+    \item All the input value is provided by the user.
 \end{itemize}
 
 \subsubsection{Responsibilities}
-Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
+These are the following responsibilities of this subsystem.
+\begin{itemize}
+    \item Must be able to take all the input values and add or remove item according to the input provided by the user.
+\end{itemize}
 
 \subsubsection{Subsystem Interfaces}
 Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
@@ -170,7 +186,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{Search Mgmt}
-This SubSystem deals with taking the item description from user. Variety of options are provided for inputting the item. User can use the camera in the cellphone to 
+This Sub System deals with taking the item description from user and it searches for the item. Variety of options are provided for searching the item. User can use the camera in the cellphone to scan the QR generated for the specific item or users will also be able to search the item by their names.
 
 \begin{figure}[h!]
 	\centering
