@@ -110,8 +110,7 @@ Each of the inputs and outputs for the subsystem are defined here. Create a tabl
 \end{table}
 
 \subsection{UI Input Validation}
-This section should be a general description of a particular subsystem for the given layer. For most subsystems, an extract of the architectural block diagram with data flows is useful. This should consist of the subsystem being described and those subsystems with which it communicates.
-
+This section will validate format and types of input from user. It will reject the inputs if user's input is wrong format and suggest the correct format of the input.Provide guidance on how to fix any errors, don't just tell users what they did wrong. It will prevent from unauthorized SQL injection into the data base.
 \begin{figure}[h!]
 	\centering
  	\includegraphics[width=0.60\textwidth]{images/subsystem}
@@ -119,7 +118,11 @@ This section should be a general description of a particular subsystem for the g
 \end{figure}
 
 \subsubsection{Assumptions}
-Any assumptions made in the definition of the subsystem should be listed and described. Pay particular attention to assumptions concerning interfaces and interactions with other layers.
+\begin{itemize}
+    \item User input item information.
+    \item User has a device with working camera.
+    \item User has stored valid item image for the item.
+\end{itemize}
 
 \subsubsection{Responsibilities}
 Each of the responsibilities/features/functions/services of the subsystem as identified in the architectural summary must be expanded to more detailed responsibilities. These responsibilities form the basis for the identification of the finer-grained responsibilities of the layer's internal subsystems. Clearly describe what each subsystem does.
