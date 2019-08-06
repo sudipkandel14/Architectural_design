@@ -12,27 +12,39 @@ This is the first sub section that user interacts with. When the user opens the 
 \subsubsection{Assumptions}
 Following assumptions are made for this SubSystem:
 \begin{itemize}
-    \item 
+    \item User select the specific function with some input.
 \end{itemize}
 
 \subsubsection{Responsibilities}
 Following are the responsibilities of this SubSystem:
 \begin{itemize}
-    \item 
+    \item To send the user request to Business\_COntroller.
+    \item To receive Messages and various images returned by Business\_Controller 
 \end{itemize}
 
 \subsubsection{Subsystem Interfaces}
-Each of the inputs and outputs for the subsystem are defined here. Create a table with an entry for each labelled interface that connects to this subsystem. For each entry, describe any incoming and outgoing data elements will pass through this interface.
+Each of the inputs and outputs for the subsystem are defined here.
 
 \begin {table}[H]
-\caption {Subsystem interfaces} 
+ 
 \begin{center}
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{input 1 \\ input 2} & \pbox{3cm}{output 1}  \\ \hline
-    \#xx & Description of the interface/bus & \pbox{3cm}{N/A} & \pbox{3cm}{output 1}  \\ \hline
+    \#1 & Login/UI\_Controller & \pbox{3cm}{Userid \\ Password} & \pbox{3cm}{N/A}  \\ \hline
+    \#2 & UI\_Controller/Login & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#3 & Register/UI\_Controller & \pbox{3cm}{Userid \\ Password\\User Name \\ Email} & \pbox{3cm}{N/A}  \\ \hline
+    \#4 & UI\_Controller/Register & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#5 & Add Shelf/UI\_Controller & \pbox{3cm}{Shelf Name \\ #Row\\ #Column \\ Shelf Location} & \pbox{3cm}{N/A}  \\ \hline
+    \#6 & UI\_Controller/Add Shelf & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#7 & Add Item/UI\_Controller & \pbox{3cm}{Item name \\ BarCode(opt) \\ Quantity\\ Expiration Date(opt)\\ Expiration\_notification(opt)\\ PIN(opt)\\Brewery(if alcohol)\\ Style(if alcohol)} & \pbox{3cm}{N/A}  \\ \hline
+    \#8 & UI\_Controller/Add Item & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message}  \\ \hline
+    \#9 & Search/UI\_Controller & \pbox{3cm}{Item Description/ QR Code} & \pbox{3cm}{N/A}  \\ \hline
+    \#10 & UI\_Controller/Search & \pbox{3cm}{N/A} & \pbox{3cm}{Image file}  \\ \hline
+    \#11 & UI\_Controller/Business\_Controller & \pbox{3cm}{User input \\ label} & \pbox{3cm}{N/A}  \\ \hline
+    \#12 & Business\_Contorller/UI\_Controller & \pbox{3cm}{N/A} & \pbox{3cm}{Success Message \\ Failure Message \\ Item image}  \\ \hline
     \end{tabular}
+    \caption {Subsystem interfaces}
 \end{center}
 \end{table}
 
@@ -70,7 +82,7 @@ Each of the inputs and outputs for the subsystem are defined here. An entry for 
     \begin{tabular}{ | p{1cm} | p{6cm} | p{3cm} | p{3cm} |}
     \hline
     ID & Description & Inputs & Outputs \\ \hline
-    \#1 & User Login Information & \pbox{3cm}{Username Password} & \pbox{3cm}{Login Confirmation msg}  \\ \hline
+    \#1 & Actor/ Login & \pbox{3cm}{Username \\Password} & \pbox{3cm}{Successful message \\ Failure Message}  \\ \hline
     \#2 & Login & \pbox{3cm}{N/A} & \pbox{3cm}{msg from UI Controller}  \\ \hline
     \end{tabular}
 \end{center}
